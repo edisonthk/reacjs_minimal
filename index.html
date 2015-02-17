@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
+    <title>Basic Example with JSX</title>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    
+    <script src="http://fb.me/react-0.12.2.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
+    <script type="text/jsx">
+      var ExampleApplication = React.createClass({
+        render: function() {
+          return (
+            <div>
+              <h1>Simple reactJS sample</h1>
+              <p>{this.props.message || 'Empty message'}</p>
+            </div>
+          );
+        }
+      });
+      
+      React.render(
+        <ExampleApplication />,
+        document.getElementById('container')
+      );
+    
+    </script>
+  </body>
+</html>
